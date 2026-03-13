@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katyayani Asen | Digital Humanities Profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #050505;
+            max-width: 1100px; 
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f0f7da 0%, #618903 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: left;
+            border-bottom: 2px solid #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        h1 { color: #6fb311; font-size: 2.5rem; text-align: center; margin-bottom: 5px; }
+        h2 { color: #84da4f; border-bottom: 1px solid #9ddd36; }
+        h3 { color: #879f69; text-align: center; margin-top: 0; }
+
+        .main-layout {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        /* Sidebar container for GIF and Contact box */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 250px;
+        }
+
+        .side-gif {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* The small box under the gif */
+        .contact-box-small {
+            background: rgba(228, 251, 209, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            text-align: center;
+            border: 1px solid #9ddd36;
+        }
+
+.content-box {
+            position: relative; /* Required for the background layer to align correctly */
+            flex: 1;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden; /* Keeps the background image within the rounded corners */
+            background: rgb(228, 251, 209); /* Fallback color */
+        }
+
+        .content-box::before {
+            content: "";
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%; 
+            height: 100%;
+            /* Replace 'your-background.jpg' with your image name */
+            background-image: url('cat_wallpaper.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2; /* This sets your 50% opacity */
+            z-index: 0; /* Puts the image behind the text */
+        }
+
+        /* This ensures your text and profile pic stay on top of the background image */
+        .content-box > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-pic {
+            display: block;
+            margin: 0 auto 20px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #54ba9b;
+        }
+
+        a { color: #2c3e50; font-weight: bold; text-decoration: none; }
+        a:hover { text-decoration: underline; color: #618903; }
+
+        @media (max-width: 800px) {
+            .main-layout {
+                flex-direction: column;
+                align-items: center;
+            }
+            .sidebar {
+                width: 80%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Katyayani Asen</h1>
+        <h3>2026S 136033-1 Creating Web Experiences for the Digital Humanities</h3>
+    </header>
+
+    <div class="main-layout">
+        
+        <div class="sidebar">
+            <img src="cat.gif" alt="A cool cat gif" class="side-gif">
+            
+            <div class="contact-box-small">
+                <strong>Connect with me:</strong><br>
+                <a href="mailto:a11826289@unet.univie.ac.at">a11826289@unet.univie.ac.at</a>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <img src="me.jpg" alt="A photo of Katyayani" class="profile-pic">
+
+            <h2>About Me</h2>
+            <p>
+                Welcome! My name is Katyayani, though most people call me Katy. I am currently pursuing a Master’s
+                in Digital Humanities alongside studies in Historical Linguistics (Indo-European Studies). With a
+                background in German Philology and Romance Studies (Spanish), my passion for languages naturally led
+                me to the digital realm. 
+            </p>
+            <p>
+                I believe that mastering digital tools is essential for effectively preserving,
+                analyzing, and visualizing linguistic data. What I like most about the DH program is the freedom to
+                explore diverse digital possibilities before narrowing my focus. When I’m not at my desk, I’m usually
+                reading, practicing a new language, or heading outdoors for hiking and climbing. Oh, and I love cats.
+            </p>
+
+            <h2>My Research Interests</h2>
+            <ul>
+                <li>Computational Phylogenetics & Cognate Detection</li>
+                <li>Digital Archiving & Textual Analysis</li>
+                <li>Indo-European Historical Linguistics</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
