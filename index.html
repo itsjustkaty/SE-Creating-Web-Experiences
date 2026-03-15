@@ -132,6 +132,12 @@
                 <strong>Connect with me:</strong><br>
                 <a href="mailto:a11826289@unet.univie.ac.at">a11826289@unet.univie.ac.at</a>
             </div>
+
+            <div id="section1">
+                <p>Ewww you stink!</p>
+                <img src="edward.jpeg" alt="Edward thinks you stink" class="side-gif">
+            </div>
+            <button onclick="hidesection('#section1')">Shut up.</button>
         </div>
 
         <div class="content-box">
@@ -157,8 +163,18 @@
                 <li>Digital Archiving & Textual Analysis</li>
                 <li>Indo-European Historical Linguistics</li>
             </ul>
+            <div id="section2">
+                <p>Make me go away.</p>
+            </div>
+            <button onclick="hidesection('#section2')">Away with you!</button> 
         </div>
     </div>
 
 </body>
+<script>
+function hidesection(sectionid) {
+var section=document.querySelector(sectionid)
+    section.style.display="none";
+    }
+</script>
 </html>
